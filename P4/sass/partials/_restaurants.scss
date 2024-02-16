@@ -1,0 +1,126 @@
+// RESTAURANTS BODY
+
+.rxsection {
+    width: 100%;
+    padding: 0px;
+    @include flex-col-center;
+    background-color: $background-color-one;
+    &__banner {
+        width: 100%;
+        & img {
+            height: 275px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__languette {
+        @include flex-col-center;
+        width: 100%;
+        background-color: $background-color-one;
+        border-radius: 40px;
+        position: relative;
+        top: -50px;
+        &--title {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 25px;         
+            & h1 {
+            font-family: "Shrikhand", serif;
+            padding: 30px 0px 20px 0px;
+            font-size: 26px;
+            }            
+        }
+        &--i:hover .heart-border {
+            color:transparent;
+        }
+        &--i:hover .full-heart {
+            color:transparent;
+        }
+        .heart-border {
+            color: black;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            left: 10px;
+            top: 1px;
+            transition: color 200ms 50ms;
+            }
+        .full-heart {
+            color: white;
+             font-size: 28px;
+             position: relative;
+             right: 23px;
+             background-image: linear-gradient(180deg, $gradiant-color-one, $gradiant-color-two);
+             background-size: 100%;
+             background-clip: text;
+             -webkit-background-clip: text;
+             transition: color 200ms 50ms;
+            }
+            &--menu {
+                margin-bottom: 10px;
+                & h2 {
+                margin-bottom: 5px;
+                font-weight: 300;
+                font-size: 18px;
+                padding: 5px 5px 0px 5px; 
+                }    
+            }
+            .rxsection-border {
+                border-top: 3px solid #99E2D0;
+                width: 45px;
+                padding-bottom: 15px;
+                position: relative;
+                left: 5px;
+            } 
+            .three {
+                gap: 80px;
+            }
+    }
+    .rxcard {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 15px;
+        width: 355px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        margin-bottom: 15px;
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 10px;
+            white-space: nowrap;
+            p {
+                margin: 3px 3px 3px 3px;
+                }
+            &--place {
+                padding: 3px;                
+            }
+            &--strong {
+                font-weight: 700;
+                font-size: 18px;
+            }
+            &--p {
+                font-weight: 700;
+                position: relative;
+                bottom: -15px;
+                right: 5px;
+            }
+            .fatp {
+                font-size: 15px;
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+.order-btn {
+    padding: 0px;
+    @include flex-col-center;
+    button {
+        width: 200px;
+        position: relative;
+        bottom: 40px;
+    }
+}
